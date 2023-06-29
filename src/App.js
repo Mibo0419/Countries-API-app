@@ -18,6 +18,7 @@ function App() {
   return (
     <div id="main-div">
       <h1 id='title' >Countries API</h1>
+      <p>Random project by Millie B</p>
 
       <div>
         <ul>{country && country.map((index, country) => (

@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import './App.css';
+import { Table, TableCell, TableContainer, TableHead, TableRow, TableBody } from '@mui/material';
 
 function App() {
   const [country, setCountry] = useState([]);
@@ -16,20 +17,40 @@ function App() {
   console.log(country[0])
 
   return (
-    <div id="main-div">
-      <h1 id='title' >Countries API</h1>
-      <p>Random project by Millie B</p>
+      <TableContainer>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Name</TableCell>
+              <TableCell>Population</TableCell>
+              <TableCell>Area</TableCell>
+              <TableCell>Region</TableCell>
+              <TableCell>Subregion</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
 
-      <div>
-        <ul>{country && country.map((index, country) => (
-          <li key={country}> 
-          <h2>Name: {index.name.common}</h2>
-          <h2>Population: {index.population}</h2>
-          </li>
-        ))}
-        </ul>
-      </div>
-    </div>
+
+    // <div id="main-div">
+    //   <h1 id='title' >Countries API</h1>
+    //   <p>Random project by Millie B</p>
+
+    //   <div>
+    //     <ul>{country && country.map((index, country) => (
+    //       <li key={country}> 
+    //       <h2>Name: {index.name.common}</h2>
+    //       <h2>Population: {index.population}</h2>
+    //       </li>
+    //     ))}
+    //     </ul>
+    //   </div>
+    // </div>
   );
 }
 
